@@ -1,0 +1,215 @@
+////
+/// blocks.scss
+/// Content Blocks
+/// @author Your Name
+////
+
+
+// Download links
+// --------------------------------------------------
+
+.download-links {
+	margin-bottom:40px;
+
+	.download-item {
+		@include make-sm-column(6);
+		@include make-md-column(4);
+		margin-bottom:30px;
+
+		.download-item-left {
+			@include make-md-column(6);
+
+			@media (max-width:$screen-sm-max) {
+				display:none;
+			}
+		}
+
+		.download-item-right {
+			@include make-sm-column(12);
+			@include make-md-column(6);
+		}
+	}
+}
+
+// Full Width Image
+// --------------------------------------------------
+
+.full-width-image {
+
+	min-height:400px;
+	background:transparent;
+}
+
+// Image / Video gallery
+// --------------------------------------------------
+
+.image-gallery,
+.video-gallery {
+	margin-bottom:40px;
+
+	.gallery-text {
+		padding-bottom:30px;
+		border-bottom: 1px solid $light-gray;
+		margin-bottom:30px;
+	}
+
+	.gallery-item {
+		@include make-sm-column(6);
+		@include make-md-column(3);
+		position:relative;
+
+		.inner-overlay {
+			position:absolute;
+			left:15px;
+			right:15px;
+			top:10px;
+			bottom:10px;
+			padding:30px;
+			color:white;
+			opacity:0;
+			transition:all 0.5s ease;
+			cursor:pointer;
+			overflow:hidden;
+
+			.overlay-text {
+				position:relative;
+				transition:all 0.8s ease;
+				margin-top:-20px;
+				p {
+					@include fs(14,18);
+				}
+				h4 {
+					color:white;
+				}
+			}
+		}
+
+		.view-button {
+			position:absolute;
+			bottom:20px;
+			left:15px;
+			right:15px;
+			text-align:center;
+			transition:all 0.5s ease;
+			cursor:pointer;
+			z-index:2;
+
+			.inner {
+				float:right;
+				background:$dark-blue;
+				border-top-left-radius:50%;
+				border-bottom-left-radius:50%;
+				width:40px;
+				line-height:30px;
+				padding:10px;
+			}
+
+			h4 {
+				transition:all 0.5s ease;
+				margin:0;
+				padding:0;
+				color:white;
+			}
+		}
+
+		&:hover {
+
+			.inner-overlay {
+				opacity:1;
+			}
+
+			.overlay-text {
+				margin-top:0px;
+			}
+
+		}
+	}
+}
+
+// Text Block
+// --------------------------------------------------
+
+.text-block {
+
+}
+
+// Accordion
+// see accordion.scss
+// --------------------------------------------------
+
+.accordion {}
+
+// Teaser blocks
+// --------------------------------------------------
+
+.teaser-block {
+	margin-bottom:40px;
+
+	.teaser-item {
+		@include make-sm-column(6);
+		@include make-md-column(4);
+		margin-bottom:30px;
+
+		.inner {
+			position:relative;
+			background:black;
+			padding:30px 20px;
+			color:white;
+			min-height:320px;
+			cursor:pointer;
+
+			.overlay {
+				position:absolute;
+				z-index:1;
+				left:0;
+				top:0;
+				bottom:0;
+				right:0;
+				background:#024b82;
+				transition:all 0.5s ease;
+				opacity:0;
+			}
+
+			@media (max-width:$screen-md-max) {
+				min-height:253px;
+			}
+
+			@media (max-width:$screen-sm-max) {
+				min-height:305px;
+			}
+
+			@media (max-width:$screen-xs-max) {
+				min-height:1px;
+			}
+
+			.text {
+				position:relative;
+				z-index:2;
+
+				h2 {
+					@include fs(34,38);
+					color:white;
+					margin-top:0;
+					word-wrap: break-word;
+
+					@media (min-width:$screen-sm-max) and (max-width:$screen-md-max) {
+						@include fs(24,28);
+					}
+				}
+
+				.teaser-text {
+					word-wrap: break-word;
+				}
+			}
+
+			&:hover {
+				.overlay {
+					opacity:0.5;
+					border-radius:0;
+					top:0;
+					bottom:0;
+				}
+			}
+		}
+	}
+}
