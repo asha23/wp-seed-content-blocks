@@ -1,34 +1,6 @@
 <?php
 
-//   ██████╗  ██████╗     ███╗   ██╗ ██████╗ ████████╗    ███████╗██████╗ ██╗████████╗
-//   ██╔══██╗██╔═══██╗    ████╗  ██║██╔═══██╗╚══██╔══╝    ██╔════╝██╔══██╗██║╚══██╔══╝
-//   ██║  ██║██║   ██║    ██╔██╗ ██║██║   ██║   ██║       █████╗  ██║  ██║██║   ██║
-//   ██║  ██║██║   ██║    ██║╚██╗██║██║   ██║   ██║       ██╔══╝  ██║  ██║██║   ██║
-//   ██████╔╝╚██████╔╝    ██║ ╚████║╚██████╔╝   ██║       ███████╗██████╔╝██║   ██║
-//   ╚═════╝  ╚═════╝     ╚═╝  ╚═══╝ ╚═════╝    ╚═╝       ╚══════╝╚═════╝ ╚═╝   ╚═╝
-//
-//   ██╗   ██╗███╗   ██╗██╗     ███████╗███████╗███████╗    ██╗   ██╗ ██████╗ ██╗   ██╗
-//   ██║   ██║████╗  ██║██║     ██╔════╝██╔════╝██╔════╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║
-//   ██║   ██║██╔██╗ ██║██║     █████╗  ███████╗███████╗     ╚████╔╝ ██║   ██║██║   ██║
-//   ██║   ██║██║╚██╗██║██║     ██╔══╝  ╚════██║╚════██║      ╚██╔╝  ██║   ██║██║   ██║
-//   ╚██████╔╝██║ ╚████║███████╗███████╗███████║███████║       ██║   ╚██████╔╝╚██████╔╝
-//    ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚══════╝╚══════╝╚══════╝       ╚═╝    ╚═════╝  ╚═════╝
-//
-//   ██╗  ██╗███╗   ██╗ ██████╗ ██╗    ██╗    ██╗    ██╗██╗  ██╗ █████╗ ████████╗
-//   ██║ ██╔╝████╗  ██║██╔═══██╗██║    ██║    ██║    ██║██║  ██║██╔══██╗╚══██╔══╝
-//   █████╔╝ ██╔██╗ ██║██║   ██║██║ █╗ ██║    ██║ █╗ ██║███████║███████║   ██║
-//   ██╔═██╗ ██║╚██╗██║██║   ██║██║███╗██║    ██║███╗██║██╔══██║██╔══██║   ██║
-//   ██║  ██╗██║ ╚████║╚██████╔╝╚███╔███╔╝    ╚███╔███╔╝██║  ██║██║  ██║   ██║
-//   ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚══╝╚══╝      ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝
-//
-//   ██╗   ██╗ ██████╗ ██╗   ██╗     █████╗ ██████╗ ███████╗    ██████╗  ██████╗ ██╗███╗   ██╗ ██████╗
-//   ╚██╗ ██╔╝██╔═══██╗██║   ██║    ██╔══██╗██╔══██╗██╔════╝    ██╔══██╗██╔═══██╗██║████╗  ██║██╔════╝
-//    ╚████╔╝ ██║   ██║██║   ██║    ███████║██████╔╝█████╗      ██║  ██║██║   ██║██║██╔██╗ ██║██║  ███╗
-//     ╚██╔╝  ██║   ██║██║   ██║    ██╔══██║██╔══██╗██╔══╝      ██║  ██║██║   ██║██║██║╚██╗██║██║   ██║
-//      ██║   ╚██████╔╝╚██████╔╝    ██║  ██║██║  ██║███████╗    ██████╔╝╚██████╔╝██║██║ ╚████║╚██████╔╝
-//      ╚═╝    ╚═════╝  ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝    ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝
-
-
+// BE CAREFUL IN HERE
 
 add_action( 'after_setup_theme', 'seed_ahoy', 16 );
 
@@ -93,10 +65,12 @@ function seed_theme_support() {
 	add_theme_support( 'post-thumbnails' );
 
 	// Custom thumbnail sizes (add as many as you like) - Or use a plugin. It's easier.
+
 	// add_image_size( 'general-thumb-600', 600, 150, true );
 	// add_image_size( 'general-thumb-300', 300, 100, true );
 
 	// wp custom background
+
 	add_theme_support( 'custom-background',
 	    array(
 	    'default-image' => '',  // background image default
@@ -138,10 +112,9 @@ function seed_theme_support() {
 	);
 }
 
-
-//******************************************************************************
+//==============================================================================
 // ASSORTED RANDOM CLEANUP ITEMS
-//******************************************************************************
+//==============================================================================
 
 function seed_filter_ptags_on_images($content){
    return preg_replace('/<p>\s*(<a .*>)?\s*(<img .* \/>)\s*(<\/a>)?\s*<\/p>/iU', '\1\2\3', $content);
@@ -155,9 +128,9 @@ function seed_excerpt_more($more) {
 	return '...  <a class="excerpt-read-more" href="'. get_permalink($post->ID) . '" title="'. __( 'Read', 'SEEDtheme' ) . get_the_title($post->ID).'">'. __( '<p>&nbsp;</p><button class="btn btn-info">Read more <i class="fa fa-angle-double-right"></i></button>', 'SEEDtheme' ) .'</a>';
 }
 
-//******************************************************************************
+//==============================================================================
 // ADD BODY CLASSES
-//******************************************************************************
+//==============================================================================
 
 function theme_body_class($classes) {
 	global $post;
@@ -170,10 +143,9 @@ function theme_body_class($classes) {
 	return $classes;
 }
 
-//******************************************************************************
+//==============================================================================
 // REMOVE TOP LEVEL ADMIN PAGES FROM SIDE MENU
-//******************************************************************************
-
+//==============================================================================
 
 function remove_admin_menus() {
     // remove_menu_page( 'edit.php' ); // posts
@@ -181,18 +153,19 @@ function remove_admin_menus() {
     // remove_menu_page( 'edit.php?post_type=page' ); // pages
 }
 
-//******************************************************************************
+//==============================================================================
 // REMOVE TOP LEVEL ADMIN PAGES FROM NAV BAR
-//******************************************************************************
+//==============================================================================
+
 function mytheme_admin_bar_render() {
 	global $wp_admin_bar;
 	$wp_admin_bar->remove_menu('comments');
 }
 add_action('wp_before_admin_bar_render', 'mytheme_admin_bar_render');
 
-//******************************************************************************
+//==============================================================================
 // CUSTOMISE TITLE TAG
-//******************************************************************************
+//==============================================================================
 
 add_filter( 'wp_title', 'rw_title', 10, 3 );
 function rw_title( $title, $sep, $seplocation ) {
@@ -223,26 +196,26 @@ function rw_title( $title, $sep, $seplocation ) {
             return $title;
 }
 
-//******************************************************************************
+//==============================================================================
 // DASHBOARD WIDGET OVERRIDES
-//******************************************************************************
+//==============================================================================
 
 function remove_dashboard_meta() {
-        remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
-        remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
-        remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
-        remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
-        remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');//since 3.8
+    remove_meta_box( 'dashboard_incoming_links', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_plugins', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_primary', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_secondary', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_quick_press', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_recent_drafts', 'dashboard', 'side' );
+    remove_meta_box( 'dashboard_recent_comments', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_right_now', 'dashboard', 'normal' );
+    remove_meta_box( 'dashboard_activity', 'dashboard', 'normal');
 }
 add_action( 'admin_init', 'remove_dashboard_meta' );
 
-//******************************************************************************
-// REMOVE SOME USELESS MENU ITEMS UNDER Appearance
-//******************************************************************************
+//==============================================================================
+// REMOVE SOME USELESS MENU ITEMS UNDER APPEARANCE
+//==============================================================================
 
 function remove_menu_items(){
 	global $submenu;
@@ -254,9 +227,9 @@ function remove_background_menu_item() {
 }
 add_action( 'after_setup_theme','remove_background_menu_item', 100 );
 
-//******************************************************************************
+//==============================================================================
 // CUSTOM ADMIN LOGIN LOGO
-//******************************************************************************
+//==============================================================================
 
 function custom_login_logo() {
 	echo '<style type="text/css">h1 a { background-image: url('.get_bloginfo('template_directory').'/build/images/custom-login-logo.png) !important; height:82px!important; background-size:164px!important; width:200px!important;}</style>';

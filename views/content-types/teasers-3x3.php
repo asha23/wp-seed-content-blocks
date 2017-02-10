@@ -1,6 +1,6 @@
 <?php
 
-$typeVar = $_SESSION['typeVar'];
+$page_id = $_SESSION['typeVar'];
 $teasers = get_sub_field('teaser_component');
 ?>
 
@@ -14,13 +14,9 @@ $teasers = get_sub_field('teaser_component');
 			$teaser = get_field('teaser_text', $post);
 ?>
 			<article class="teaser-item match">
-<?php
-				// Generate random numbers to change background position
-				$randx = rand(3, 8) * 10;
-				$randy = rand(3, 8) * 10;
-?>
+
 				<a href="<?php the_permalink(); ?>">
-					<div class="inner" style="background-position:<?php echo $randx; ?>% <?php echo $randy; ?>%;">
+					<div class="inner">
 						<div class="text">
 							<header>
 								<h2><?php the_title(); ?></h2>

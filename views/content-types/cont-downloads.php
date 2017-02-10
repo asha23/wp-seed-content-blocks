@@ -1,8 +1,10 @@
 <?php
 
-$typeVar = $_SESSION['typeVar'];
-$title = get_sub_field('title', $typeVar);
-$downloads = get_sub_field('downloads', $typeVar);
+	// Downloads
+
+	$page_id = $_SESSION['typeVar'];
+	$title = get_sub_field('title', $page_id);
+	$downloads = get_sub_field('downloads', $page_id);
 
 ?>
 
@@ -27,9 +29,8 @@ $downloads = get_sub_field('downloads', $typeVar);
 		$download_text = $download['download_text'];
 		$button_type = $download['button_type'];
 		$link_title = $download['link_title'];
-		//$url = $download['url'];
 
-		switch($button_type) {
+		switch($button_type):
 			case "internal":
 				$target = "";
 				$url = $download['inturl'];
@@ -42,7 +43,7 @@ $downloads = get_sub_field('downloads', $typeVar);
 				$target = "target='_blank'";
 				$url = $download['fileurl'];
 			break;
-		}
+		endswitch;
 
 ?>
 
@@ -64,7 +65,7 @@ $downloads = get_sub_field('downloads', $typeVar);
 
 
 <?php
-						switch($button_type) {
+						switch($button_type) :
 							case "internal":
 ?>
 								<a href="<?php echo $url; ?>" class="main-button-non-block" <?php echo $target; ?>>Download</a>
@@ -83,10 +84,8 @@ $downloads = get_sub_field('downloads', $typeVar);
 ?>
 						</li>
 <?php
-
-						}
+						endswitch;
 ?>
-
 
 					</div>
 
@@ -106,6 +105,5 @@ $downloads = get_sub_field('downloads', $typeVar);
 	endforeach;
 ?>
 	</div>
-
 
 </section>

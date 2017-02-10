@@ -1,37 +1,8 @@
 // ===========================================================================================================
 // Gulp config file for Seed Wordpress Base theme
 // Author: Ash Whiting
-// Version: 1.2.1
+// Version: 0.3.1
 // ===========================================================================================================
-
-//   ██████╗  ██████╗     ███╗   ██╗ ██████╗ ████████╗    ███████╗██████╗ ██╗████████╗
-//   ██╔══██╗██╔═══██╗    ████╗  ██║██╔═══██╗╚══██╔══╝    ██╔════╝██╔══██╗██║╚══██╔══╝
-//   ██║  ██║██║   ██║    ██╔██╗ ██║██║   ██║   ██║       █████╗  ██║  ██║██║   ██║
-//   ██║  ██║██║   ██║    ██║╚██╗██║██║   ██║   ██║       ██╔══╝  ██║  ██║██║   ██║
-//   ██████╔╝╚██████╔╝    ██║ ╚████║╚██████╔╝   ██║       ███████╗██████╔╝██║   ██║
-//   ╚═════╝  ╚═════╝     ╚═╝  ╚═══╝ ╚═════╝    ╚═╝       ╚══════╝╚═════╝ ╚═╝   ╚═╝
-//
-//   ██╗   ██╗███╗   ██╗██╗     ███████╗███████╗███████╗    ██╗   ██╗ ██████╗ ██╗   ██╗
-//   ██║   ██║████╗  ██║██║     ██╔════╝██╔════╝██╔════╝    ╚██╗ ██╔╝██╔═══██╗██║   ██║
-//   ██║   ██║██╔██╗ ██║██║     █████╗  ███████╗███████╗     ╚████╔╝ ██║   ██║██║   ██║
-//   ██║   ██║██║╚██╗██║██║     ██╔══╝  ╚════██║╚════██║      ╚██╔╝  ██║   ██║██║   ██║
-//   ╚██████╔╝██║ ╚████║███████╗███████╗███████║███████║       ██║   ╚██████╔╝╚██████╔╝
-//    ╚═════╝ ╚═╝  ╚═══╝╚══════╝╚══════╝╚══════╝╚══════╝       ╚═╝    ╚═════╝  ╚═════╝
-//
-//   ██╗  ██╗███╗   ██╗ ██████╗ ██╗    ██╗    ██╗    ██╗██╗  ██╗ █████╗ ████████╗
-//   ██║ ██╔╝████╗  ██║██╔═══██╗██║    ██║    ██║    ██║██║  ██║██╔══██╗╚══██╔══╝
-//   █████╔╝ ██╔██╗ ██║██║   ██║██║ █╗ ██║    ██║ █╗ ██║███████║███████║   ██║
-//   ██╔═██╗ ██║╚██╗██║██║   ██║██║███╗██║    ██║███╗██║██╔══██║██╔══██║   ██║
-//   ██║  ██╗██║ ╚████║╚██████╔╝╚███╔███╔╝    ╚███╔███╔╝██║  ██║██║  ██║   ██║
-//   ╚═╝  ╚═╝╚═╝  ╚═══╝ ╚═════╝  ╚══╝╚══╝      ╚══╝╚══╝ ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝
-//
-//   ██╗   ██╗ ██████╗ ██╗   ██╗     █████╗ ██████╗ ███████╗    ██████╗  ██████╗ ██╗███╗   ██╗ ██████╗
-//   ╚██╗ ██╔╝██╔═══██╗██║   ██║    ██╔══██╗██╔══██╗██╔════╝    ██╔══██╗██╔═══██╗██║████╗  ██║██╔════╝
-//    ╚████╔╝ ██║   ██║██║   ██║    ███████║██████╔╝█████╗      ██║  ██║██║   ██║██║██╔██╗ ██║██║  ███╗
-//     ╚██╔╝  ██║   ██║██║   ██║    ██╔══██║██╔══██╗██╔══╝      ██║  ██║██║   ██║██║██║╚██╗██║██║   ██║
-//      ██║   ╚██████╔╝╚██████╔╝    ██║  ██║██║  ██║███████╗    ██████╔╝╚██████╔╝██║██║ ╚████║╚██████╔╝
-//      ╚═╝    ╚═════╝  ╚═════╝     ╚═╝  ╚═╝╚═╝  ╚═╝╚══════╝    ╚═════╝  ╚═════╝ ╚═╝╚═╝  ╚═══╝ ╚═════╝
-
 
 // ===========================================================================================================
 // VARIABLES
@@ -42,19 +13,21 @@
 // ===========================================================================================================
 
 var config = {
-	bowerPath:      			'bower/',
-	bowerPathAll:  				'bower/**/*',
-	jsPath:         			'library/js/',
-	jsPathAll:     				'library/js/*.js',
-	jsPathVendor:   			'library/js/vendor-libs/',
-	temp:           			'library/temp',
-	scssPath:       			'library/scss',
-	scssPathAll:    			'library/scss/**/*.scss',
-	imgPath:        			'build/images',
-	destImg:        			'build/images/**/*.{gif,png,jpg,jpeg,svg}',
-	dest:           			'build',
-	destCss:        			'build/css',
-	destJs:         			'build/js'
+	uploadPath:				'../../uploads',
+	bowerPath:      		'bower/',
+	bowerPathAll:  			'bower/**/*',
+	jsPath:         		'library/js/',
+	jsPathAll:     			'library/js/*.js',
+	jsPathVendor:   		'library/js/vendor-libs/',
+	temp:           		'library/temp',
+	scssPath:       		'library/scss',
+	scssPathAll:    		'library/scss/**/*.scss',
+	imgPath:        		'build/images',
+	destImg:        		'build/images/**/*.{gif,png,jpg,jpeg,svg}',
+	dest:           		'build',
+	destCss:        		'build/css',
+	destJs:         		'build/js',
+	modernizr:               'library/js/modernizr',
 };
 
 // ===========================================================================================================
@@ -66,14 +39,20 @@ var config = {
 var jsFileList = [
 	config.jsPathVendor  	+ 'respond/respond.js',
     config.jsPathVendor 	+ 'bootstrap-js/bootstrap.js',
-    // config.bowerPath 		+ 'lightgallery/dist/js/lightgallery.js',
-    // config.bowerPath 		+ 'lightgallery/dist/js/lg-thumbnail.js',
-    // config.bowerPath 		+ 'lightgallery/dist/js/lg-fullscreen.js',
-    // config.bowerPath 		+ 'lightgallery/dist/js/lg-video.js',
+	// config.jsPathVendor  + 'lightgallery/lightgallery.js',
+	// config.jsPathVendor  + 'lg-thumbnail/lg-thumbnail.js',
+	// config.jsPathVendor  + 'lg-video/lg-video.js',
+	// config.jsPathVendor  + 'lg-fullscreen/lg-fullscreen.js',
+	// config.jsPathVendor 	+ 'imagesloaded/imagesloaded.js',
 	// config.jsPathVendor 	+ 'isotope/isotope.pkgd.js',
 	// config.jsPathVendor 	+ 'cycle2/jquery.cycle2.js',
 	// config.jsPathVendor 	+ 'slick/slick.js',
+	// config.jsPathVendor 	+ 'matchMedia/matchMedia.js',
+	// config.jsPathVendor 	+ 'enquire/enquire.js',
+	// config.jsPathVendor 	+ 'js-cookie/js.cookie.js',
 	// config.jsPathVendor 	+ 'matchHeight/jquery.matchHeight.js',
+	// config.jsPathVendor 	+ 'velocity/velocity.js',
+	// config.jsPathVendor 	+ 'create_js/createjs.min.js',
 	config.jsPath 			+ '/scripts.js'
 ];
 
@@ -81,8 +60,8 @@ var jsFileList = [
 
 var scssFilePaths = [
     config.bowerPath 		+ 'components-font-awesome/scss/',
-    //config.bowerPath 		+ 'lightgallery/dist/css/',
-	//config.bowerPath 		+ 'slick-carousel/slick/'
+    config.bowerPath 		+ 'lightgallery/dist/css/',
+	config.bowerPath 		+ 'slick-carousel/slick/'
 ];
 
 var bootstrapPath = [
@@ -93,30 +72,30 @@ var bootstrapPath = [
 // Load some Gulp plugins
 // ===========================================================================================================
 
+var gulpLoadPlugins = require('gulp-load-plugins');
+var plugins = gulpLoadPlugins();
 var gulp = require('gulp'); // Load the Gulp core
 var runSequence = require('run-sequence'); // Load as this isn't gulp based
 var buster = require('gulp-asset-hash'); // Load as this didn't work :P
 var cssSelectorLimit = require('gulp-css-selector-limit');
 var cleanCSS = require('gulp-clean-css');
-var sassdoc = require('sassdoc');
-
+var sourcemaps = require('gulp-sourcemaps');
+var plumber = require('gulp-plumber');
 // Load all the other plugins by referring to package.json
 
-var gulpLoadPlugins = require('gulp-load-plugins');
-var plugins = gulpLoadPlugins();
+
 
 
 // ===========================================================================================================
 // TASKS
 //
 // Sequencing became necessary because we only want to lint scripts.js (not every script!)
-// Also, we want to fold Modernizr into the concatenated script file for deployment
 //
 // If there is a better solution then fill your boots
 // ===========================================================================================================
 
 gulp.task('default', function() {
-	runSequence('bower', 'bower-files', 'modernizr', 'lint', 'scripts', 'styles', 'sassdoc');
+	runSequence('bower', 'bower-files', 'modernizr', 'lint', 'scripts', 'styles');
 });
 
 // ===========================================================================================================
@@ -142,9 +121,13 @@ gulp.task('bower-files', [
 	'bootstrap-scripts',
 	'fontawesome',
 	'fontawesome-stylesheet',
-	'lightgallery-css',
-	'lightgallery-fonts',
-	'lightgallery-img',
+	'lg-css',
+	'lg-fonts',
+	'lg-img',
+	'lg-thumbnail',
+	'lg-video',
+	'lg-fullscreen',
+	'lightgallery',
 	'imagesloaded',
 	'isotope',
 	'slick-scripts',
@@ -156,7 +139,10 @@ gulp.task('bower-files', [
 	'matchheight',
 	'cycle2',
 	'respond',
-	'flexibility'
+	'flexibility',
+	'bootstrap-validator',
+	'js-cookie',
+	'velocity'
 ]);
 
 // ===========================================================================================================
@@ -179,7 +165,7 @@ gulp.task('bootstrap-scripts', function () {
 
 gulp.task('fontawesome', function () {
     return gulp.src(config.bowerPath + 'components-font-awesome/fonts/**/**.*')
-        .pipe(gulp.dest(config.dest + '/fonts'))
+        .pipe(gulp.dest(config.destCss + '/fonts'))
 });
 
 gulp.task('fontawesome-stylesheet', function () {
@@ -187,23 +173,45 @@ gulp.task('fontawesome-stylesheet', function () {
         .pipe(gulp.dest(config.scssPath + '/fontawesome'))
 });
 
-// Copy lightgallery fonts in destination dir
+// Copy lightgallery fonts to destination dir
 
-gulp.task('lightgallery-fonts', function () {
+gulp.task('lg-fonts', function () {
     return gulp.src(config.bowerPath + 'lightgallery/dist/fonts/**/**.*')
-        .pipe(gulp.dest(config.dest + '/fonts'))
+        .pipe(gulp.dest(config.destCss + '/fonts'))
 });
 
-// Copy lightgallery images in destination dir
+// Copy lightgallery images to destination dir
 
-gulp.task('lightgallery-img', function () {
+gulp.task('lg-img', function () {
     return gulp.src(config.bowerPath + 'lightgallery/dist/img/**/**.*')
         .pipe(gulp.dest(config.dest + '/images'))
 });
 
-gulp.task('lightgallery-css', function () {
+gulp.task('lg-css', function () {
     return gulp.src(config.bowerPath + 'lightgallery/dist/css/lightgallery.css')
         .pipe(gulp.dest(config.scssPath + '/lightgallery'))
+});
+
+// Copy lightgallery scripts to vendor dir
+
+gulp.task('lightgallery', function() {
+	return gulp.src(config.bowerPath + 'lightgallery/dist/js/lightgallery.js')
+        .pipe(gulp.dest(config.jsPathVendor + '/lightgallery'))
+});
+
+gulp.task('lg-video', function() {
+	return gulp.src(config.bowerPath + 'lg-video/dist/lg-video.js')
+        .pipe(gulp.dest(config.jsPathVendor + '/lg-video'))
+});
+
+gulp.task('lg-fullscreen', function() {
+	return gulp.src(config.bowerPath + 'lg-fullscreen/dist/lg-fullscreen.js')
+        .pipe(gulp.dest(config.jsPathVendor + '/lg-fullscreen'))
+});
+
+gulp.task('lg-thumbnail', function() {
+	return gulp.src(config.bowerPath + 'lg-thumbnail/dist/lg-thumbnail.js')
+        .pipe(gulp.dest(config.jsPathVendor + '/lg-thumbnail'))
 });
 
 // Copy imagesloaded in destination dir
@@ -246,7 +254,7 @@ gulp.task('slick-css', function() {
 
 gulp.task('slick-fonts', function() {
 	return gulp.src(config.bowerPath + 'slick-carousel/slick/fonts/**.*')
-        .pipe(gulp.dest(config.dest + '/fonts'))
+        .pipe(gulp.dest(config.destCss + '/fonts'))
 });
 
 gulp.task('slick-img', function() {
@@ -282,11 +290,42 @@ gulp.task('flexibility', function () {
         .pipe(gulp.dest(config.jsPathVendor + '/flexibility'))
 });
 
+// Bootstrap form validation
+
+gulp.task('bootstrap-validator', function () {
+    return gulp.src(config.bowerPath + 'bootstrap-validator/dist/validator.js')
+        .pipe(gulp.dest(config.jsPathVendor + '/bootstrap-validator'))
+});
+
+// Cookies
+
+gulp.task('js-cookie', function () {
+    return gulp.src(config.bowerPath + 'js-cookie/src/js.cookie.js')
+        .pipe(gulp.dest(config.jsPathVendor + '/js-cookie'))
+});
+
+// Velocity
+
+gulp.task('velocity', function () {
+    return gulp.src(config.bowerPath + 'velocity/velocity.js')
+        .pipe(gulp.dest(config.jsPathVendor + '/velocity'))
+});
+
+// Errors
+
+var onError = function (err) {
+	console.log(err.toString());
+	this.emit('end');
+};
+
 // Styles task
 // ===========================================================================================================
 
 gulp.task('vendor-styles', function(){
 	return gulp.src([config.scssPath + '/third-party.scss']) // third party css
+		.pipe(plumber({
+			errorHandler: reportError
+		}))
 		.pipe(plugins.sass({
 			//outputStyle: 'compressed',
             includePaths: scssFilePaths
@@ -296,14 +335,12 @@ gulp.task('vendor-styles', function(){
 		.pipe(plugins.combineMq())
 		.pipe(plugins.cleanCss({compatibility: 'ie8'}))
 		.pipe(gulp.dest(config.destCss))
-		.on('error', reportError)
-
 })
 
 gulp.task('styles', function () {
 	return gulp.src([config.scssPath + '/styles.scss']) // Base scss include
-		.pipe(plugins.plumber(function(error) {
-			errorHandler:reportError
+		.pipe(plumber({
+			errorHandler: reportError
 		}))
 		.pipe(plugins.sass({
 			includePaths: scssFilePaths,
@@ -318,7 +355,6 @@ gulp.task('styles', function () {
 			template: '<%= name %>.<%= ext %>'
 		}))
 		.pipe(gulp.dest(config.destCss))
-		.on('error', reportError)
 
 });
 
@@ -328,8 +364,8 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
 	return gulp.src(jsFileList)
-		.pipe(plugins.plumber(function(error) {
-			errorHandler:reportError
+		.pipe(plumber({
+			errorHandler: reportError
 		}))
 		.pipe(plugins.concat({
 			path: config.destJs + '/scripts.js',
@@ -342,8 +378,8 @@ gulp.task('scripts', function () {
 			manifest: './build/manifest.json',
 			template: '<%= name %>.<%= ext %>'
 		}))
+		.pipe(sourcemaps.write())
 		.pipe(gulp.dest(config.destJs))
-		.on('error', reportError)
 
 });
 
@@ -352,19 +388,21 @@ gulp.task('scripts', function () {
 
 gulp.task('lint', function(){
 	return gulp.src(config.jsPath + 'js/scripts.js')
+		.pipe(plumber({
+			errorHandler: reportError
+		}))
 		.pipe(plugins.jshint())
 		.pipe(plugins.plumber(function(error) {
 			errorHandler:reportError
 		}))
 		.pipe(plugins.jshint.reporter('default'))
-		.on('error', reportError)
 });
 
 // Modernizr task
 // ===========================================================================================================
 
 gulp.task('modernizr', function() {
-	return gulp.src(config.jsPathVendor + "/modernizr.js")
+	return gulp.src(config.modernizr + "/modernizr.js")
 		.pipe(plugins.modernizr({
 			options: [
 				'setClasses',
@@ -378,7 +416,6 @@ gulp.task('modernizr', function() {
 		.pipe(plugins.uglify())
 		.pipe(plugins.rename('modernizr.min.js'))
 		.pipe(gulp.dest(config.destJs))
-		.on('error', reportError)
 });
 
 // Images task
@@ -394,6 +431,16 @@ gulp.task('images', function () {
 		.pipe(gulp.dest(config.imgPath))
 });
 
+gulp.task('images-uploads', function () {
+	return gulp.src('../../uploads/**/*.{gif,png,jpg,jpeg,svg}')
+		.pipe(plugins.cache(plugins.imagemin({
+			optimizationLevel: 3,
+			progressive: false,
+			interlaced: false
+		})))
+		.pipe(gulp.dest(config.uploadPath))
+});
+
 // Watch task
 // ===========================================================================================================
 
@@ -402,6 +449,7 @@ gulp.task('watch', function () {
 		runSequence('styles')
 	});
 	gulp.watch(config.destImg, ['images']);
+	gulp.watch(config.uploadPath, ['images-uploads']);
 
 	// Run the scripts task in the correct sequence
 
@@ -411,7 +459,7 @@ gulp.task('watch', function () {
 
 });
 
-// Bo Selector limit check
+// Bo Selector limit check (bless)
 // ===========================================================================================================
 
 gulp.task('selector', function(){
@@ -444,14 +492,6 @@ gulp.task('minify-bless', function(){
 		.pipe(gulp.dest('build/css/'));
 });
 
-// Sassdoc
-// ===========================================================================================================
-
-gulp.task('sassdoc', function () {
-  return gulp.src('library/scss/**/*.scss')
-    .pipe(sassdoc());
-});
-
 // ===========================================================================================================
 // HELPER FUNCTIONS
 // ===========================================================================================================
@@ -474,7 +514,6 @@ var reportError = function (error) {
     if (error.fileName) {
 		report += chalk('FILE:') + ' ' + error.fileName + '\n';
 	}
-
     console.error(report);
-    this.emit('end'); // Stop the watch task from ending
+	this.emit('end');
 }

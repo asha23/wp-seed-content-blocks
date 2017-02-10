@@ -1,9 +1,9 @@
 <?php
 
-$typeVar = $_SESSION['typeVar'];
-$block_title = get_sub_field('block_title', $typeVar);
-$videos = get_sub_field('videos', $typeVar);
-$video_text = get_sub_field('video_title_text', $typeVar);
+$page_id = $_SESSION['typeVar'];
+$block_title = get_sub_field('block_title', $page_id);
+$videos = get_sub_field('videos', $page_id);
+$video_text = get_sub_field('video_title_text', $page_id);
 
 ?>
 

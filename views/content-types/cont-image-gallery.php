@@ -1,9 +1,9 @@
 <?php
 
-$typeVar = $_SESSION['typeVar'];
-$title = get_sub_field('block_title', $typeVar);
-$image_gallery = get_sub_field('image_gallery', $typeVar);
-$image_gallery_text = get_sub_field('image_gallery_text', $typeVar);
+$page_id = $_SESSION['typeVar'];
+$title = get_sub_field('block_title', $page_id);
+$image_gallery = get_sub_field('image_gallery', $page_id);
+$image_gallery_text = get_sub_field('image_gallery_text', $page_id);
 ?>
 
 <section class="container image-gallery">

@@ -1,5 +1,5 @@
 <?php
 
-$typeVar = $_SESSION['typeVar'];
+$page_id = $_SESSION['typeVar'];
 
 ?>

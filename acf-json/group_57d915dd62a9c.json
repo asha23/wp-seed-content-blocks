@@ -88,7 +88,8 @@
             "default_value": "",
             "tabs": "all",
             "toolbar": "full",
-            "media_upload": 1
+            "media_upload": 1,
+            "delay": 0
         },
         {
             "key": "field_57d916a632ded",
@@ -128,7 +129,7 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-clone-root.php"
+                "value": "default"
             }
         ]
     ],
@@ -142,5 +143,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1473845306
+    "modified": 1486719596
 }

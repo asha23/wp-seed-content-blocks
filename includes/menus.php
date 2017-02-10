@@ -1,8 +1,8 @@
 <?php
 
-//******************************************************************************
+//==============================================================================
 // MENUS & NAVIGATION
-//******************************************************************************
+//==============================================================================
 
 // the main menu
 function seed_main_nav() {
@@ -22,7 +22,7 @@ function seed_main_nav() {
 	    	'walker' => new wp_bootstrap_navwalker()        // for bootstrap nav
 		));
 	};
-} /* end AKA main nav */
+}
 
 // the footer menu (should you choose to use one)
 function seed_footer_links() {
@@ -40,7 +40,7 @@ function seed_footer_links() {
 		'depth' => 0,                                   // limit the depth of the nav
     	'fallback_cb' => 'seed_footer_links_fallback', 	// fallback function
 	));
-} /* end AKA footer link */
+}
 
 // this is the fallback for header menu
 function seed_main_nav_fallback() {

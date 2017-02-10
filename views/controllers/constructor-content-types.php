@@ -2,10 +2,10 @@
 
 // Main content type constructor
 
-$typeVar = $_SESSION['typeVar'];
+$page_id = $_SESSION['typeVar'];
 
-if( have_rows('global_content_types', $typeVar) ):
-	while ( have_rows('global_content_types', $typeVar) ) : the_row();
+if( have_rows('global_content_types', $page_id) ):
+	while ( have_rows('global_content_types', $page_id) ) : the_row();
 		$layout = get_row_layout();
 
 		switch ($layout) {

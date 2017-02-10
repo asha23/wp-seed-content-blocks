@@ -1,7 +1,9 @@
 <?php
 
-$typeVar = $_SESSION['typeVar'];
-$accordions = get_sub_field('accordion', $typeVar);
+	// Accordion
+
+	$page_id = $_SESSION['typeVar'];
+	$accordions = get_sub_field('accordion', $page_id);
 
 ?>
 
@@ -13,18 +15,17 @@ $accordions = get_sub_field('accordion', $typeVar);
 		$content = $accordion['content'];
 ?>
 
-	<div class="set">
+		<div class="set">
 
-		<a href="javascript:;" class="title">
-			<h3><?php echo $title; ?> <i class="fa fa-plus"></i></h3>
-		</a>
+			<a href="javascript:;" class="title">
+				<h3><?php echo $title; ?> <i class="fa fa-plus"></i></h3>
+			</a>
 
-		<div class="content">
-			<?php echo $content; ?>
+			<div class="content">
+				<?php echo $content; ?>
+			</div>
+
 		</div>
-
-	</div>
-
 
 <?php
 	endforeach;

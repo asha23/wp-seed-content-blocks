@@ -1,13 +1,13 @@
 <?php
 
-$typeVar = $_SESSION['typeVar'];
-$cat_name = get_sub_field('category_name', $typeVar);
+$page_id = $_SESSION['typeVar'];
+$cat_name = get_sub_field('category_name', $page_id);
 
 $category_name = $cat_name->name;
 $category_slug = $cat_name->slug;
 $category_taxonomy = $cat_name->taxonomy;
 
-$list_type = get_sub_field('list_type', $typeVar);
+$list_type = get_sub_field('list_type', $page_id);
 
 ?>
 
@@ -23,14 +23,14 @@ $list_type = get_sub_field('list_type', $typeVar);
 				$category_post->the_post();
 
 
-					switch($list_type) {
+					switch($list_type) :
 						case 'block':
 							get_template_part('views/content-types/cont', 'people-full');
 						break;
 						case 'teaser':
 							get_template_part('views/content-types/cont', 'people-teasers');
 						break;
-					}
+					endswitch;
 
 			endwhile;
 		endif;

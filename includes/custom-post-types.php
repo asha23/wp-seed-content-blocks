@@ -11,7 +11,6 @@ function example_post_type() {
     $labels = array(
         'name'                  => _x( 'Galleries', 'Post Type General Name', 'text_domain' ),
         'singular_name'         => _x( 'Example', 'Post Type Singular Name', 'text_domain' ),
-        'menu_name'             => __( 'Galleries', 'text_domain' ),
         'name_admin_bar'        => __( 'Galleries', 'text_domain' ),
         'parent_item_colon'     => __( 'Parent Item:', 'text_domain' ),
         'all_items'             => __( 'All Galleries', 'text_domain' ),

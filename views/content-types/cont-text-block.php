@@ -1,24 +1,24 @@
 <?php
 
-$typeVar = $_SESSION['typeVar'];
+$page_id = $_SESSION['typeVar'];
 
-$block_title = get_sub_field('title', $typeVar);
-$block_type = get_sub_field('block_type', $typeVar);
-$full_content = get_sub_field('full_width_content', $typeVar);
+$block_title = get_sub_field('title', $page_id);
+$block_type = get_sub_field('block_type', $page_id);
+$full_content = get_sub_field('full_width_content', $page_id);
 
 // Left block
 
-$l_image_or_plain_text = get_sub_field('left_image_or_plain_text', $typeVar);
-$l_column_width = get_sub_field('left_column_width', $typeVar);
-$l_text = get_sub_field('left_text', $typeVar);
-$l_image = get_sub_field('left_image', $typeVar);
+$l_image_or_plain_text = get_sub_field('left_image_or_plain_text', $page_id);
+$l_column_width = get_sub_field('left_column_width', $page_id);
+$l_text = get_sub_field('left_text', $page_id);
+$l_image = get_sub_field('left_image', $page_id);
 
 // Right block
 
-$r_image_or_plain_text = get_sub_field('right_image_or_plain_text', $typeVar);
-$r_column_width = get_sub_field('right_column_width', $typeVar);
-$r_text = get_sub_field('right_text', $typeVar);
-$r_image = get_sub_field('right_image', $typeVar);
+$r_image_or_plain_text = get_sub_field('right_image_or_plain_text', $page_id);
+$r_column_width = get_sub_field('right_column_width', $page_id);
+$r_text = get_sub_field('right_text', $page_id);
+$r_image = get_sub_field('right_image', $page_id);
 
 ?>
 
@@ -33,7 +33,7 @@ $r_image = get_sub_field('right_image', $typeVar);
 <?php
 		endif;
 
-		switch($block_type) {
+		switch($block_type) :
 			case "full-width":
 ?>
 				<article class="full-width">
@@ -74,7 +74,7 @@ $r_image = get_sub_field('right_image', $typeVar);
 			</div>
 <?php
 		break;
-	}
+	endswitch;
 ?>
 
 </section>
